@@ -139,6 +139,10 @@ footer {
     .hamburger {
         display: block;
     }
+     .logo a{
+        font-size: 20px;
+        text-decoration: none;
+    }
 
     .nav-links {
         position: absolute;
