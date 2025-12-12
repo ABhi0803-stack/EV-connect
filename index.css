@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    font-family: "Lexend", sans-serif;
+    background-color: #131212;
+    color: #ffffff;
+}
+
+body {
+    padding-top: 0;
+}
+
+.navbar {
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    max-width: 100%;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 600;
+    color: #1ed41e;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.nav-links li {
+    transform: scale(1);
+    transform-origin: center;
+}
+
+.nav-links li:hover {
+    transform: scale(1.1);
+}
+
+.nav-links a {
+    color: #ffffff;
+    font-size: 17px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #1ed41e;
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.hamburger:hover {
+    color: #1ed41e;
+}
+
+.about-section {
+    min-height: calc(100vh - 90px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url("./images/electric-vehicle.jpg") center center / cover no-repeat;
+}
+
+.about {
+    max-width: 550px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #1ed41e;
+}
+
+p {
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+button {
+    padding: 14px 30px;
+    border: none;
+    background: #1ed41e;
+    color: #000;
+    font-family: "Lexend", sans-serif;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: auto;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background: #119b11;
+    color: aliceblue;
+    transform: scale(1.05);
+}
+
+.footer-section {
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.footer-section h3 {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #111;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        transform: translateY(-300px);
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s ease;
+    }
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .navbar {
+        padding: 15px 20px;
+    }
+    .about {
+        max-width: 450px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    p {
+        font-size: 16px;
+    }
+    button {
+        width: 45%;
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+    .about {
+        max-width: 90%;
+        padding: 10px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 15px;
+    }
+    button {
+        width: 90%;
+        font-size: 15px;
+    }
+}

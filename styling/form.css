@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: "Lexend", sans-serif;
+    background-color: #131212;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url("/EV/images/green-abstract-background_23-2151820768.avif") center center / cover no-repeat;
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form h2 {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-row label {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.form-row input {
+    flex: 2;
+    padding: 8px 10px;
+    font-family: "Lexend", sans-serif;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: white;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1ed41e;
+    color: white;
+    font-size: 16px;
+    font-family: "Lexend", sans-serif;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #15b715;
+}
+
+.navbar {
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 600;
+    color: #1ed41e;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links li:hover {
+    transform: scale(1.1);
+}
+
+.nav-links a {
+    color: #ffffff;
+    font-size: 17px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #1ed41e;
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #111;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 10px;
+}
+
+.footer-section {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-section h3 {
+    margin: 0;
+}
+
+.success {
+    position: fixed;
+    inset: 0;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.4);
+    backdrop-filter: blur(5px);
+    z-index: 999;
+}
+
+.success .center {
+    background-color: #555;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 90%;
+    width: 350px;
+    box-sizing: border-box;
+}
+
+/* Header inside success modal */
+.success .center .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.success .center .head h1 {
+    background-color: #2e2d2d;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0;
+    flex: 1;
+}
+
+.success .crossbtn {
+    background-color: #ffffff;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-left: 10px;
+}
+
+.success .crossbtn:hover {
+    transform: scale(1.1);
+}
+
+.success .center p {
+    background-color: #2e2d2d;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #111;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        transform: translateY(-300px);
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s ease;
+    }
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+    .success .center {
+        padding: 15px;
+        width: 90%;
+    }
+    .form-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .form-row label {
+        margin-bottom: 5px;
+    }
+    .form-row input {
+        width: 100%;
+    }
+}

@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: "Lexend", sans-serif;
+    background-color: #131212;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 70px;
+}
+
+main{
+    flex: 1;
+}
+
+.navbar {
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 600;
+    color: #1ed41e;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links li:hover {
+    transform: scale(1.1);
+}
+
+.nav-links a {
+    color: #ffffff;
+    font-size: 17px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #1ed41e;
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #111;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 10px;
+}
+
+.footer-section {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-section h3 {
+    margin: 0;
+}
+
+.dashboard {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.dashboard h3 {
+    padding: 10px 0;
+    font-size: 24px;
+    color: #1ed41e;
+}
+
+.table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tablelist {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.columnheaders {
+    color: #1ed41e;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.tablelist th,
+.tablelist td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.tablelist tr {
+    border: 1px solid #ccc;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #111;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        transform: translateY(-300px);
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s ease;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .tablelist {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .tablelist th,
+    .tablelist td {
+        padding: 8px;
+        font-size: 13px;
+    }
+}

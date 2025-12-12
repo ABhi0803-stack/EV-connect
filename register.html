@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./styling/form.css">
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+<title>EV Supplier Connect</title>
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="logo">EV Connect</div>
+        <div class="hamburger" id="hamburger">☰</div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./dashboard.html">Dashboard</a></li>
+            <li><a href="./register.html">Register</a></li>
+            <li><a href="./contact.html">Contact us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <form id="evform">
+        <h2>Fill the details below</h2>
+        <div class="form-row">
+            <label for="companyname">Company Name</label>
+            <input type="text" id="companyname" name="companyname" placeholder="Company Name" required autocomplete="off">
+        </div>
+        <div class="form-row">
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location" placeholder="Location" required autocomplete="off">
+        </div>
+        <div class="form-row">
+            <label for="component">Component Category</label>
+            <input type="text" id="component" name="component" placeholder="Component Category" required autocomplete="off">
+        </div>
+        <div class="form-row">
+            <label for="production">Production Capacity</label>
+            <input type="text" id="production" name="production" placeholder="Production Capacity" required autocomplete="off">
+        </div>
+        <div class="form-row">
+            <label for="cpersonname">Contact Person Name</label>
+            <input type="text" id="cpersonname" name="cpersonname" placeholder="Contact Person Name" required autocomplete="off">
+        </div>
+        <div class="form-row">
+            <label for="cnumber">Contact Number</label>
+            <input type="tel" id="cnumber" name="cnumber" placeholder="10-digit number" maxlength="10" required autocomplete="off">
+        </div>
+        <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required autocomplete="off">
+        </div>
+        <button type="submit" class="submitbtn">Submit</button>
+    </form>
+</main>
+
+<section class="success">
+    <div class="center">
+        <div class="head">
+            <h1 class="centerh1"></h1>
+            <button class="crossbtn" onclick="window.location.href='index.html'">X</button>
+        </div>
+        <p class="centerp">Thank you for submitting. We will contact you for further information.</p>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-section">
+        <h3>All Copyright reserved under EV Connect @<span id="year"></span></h3>
+    </div>
+</footer>
+
+<script src="form.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: "Lexend", sans-serif;
+    background-color: #131212;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 70px;
+}
+
+main {
+    flex: 1;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url("/EV/images/green-abstract-background_23-2151820768.avif") center center / cover no-repeat;
+}
+
+.navbar {
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 600;
+    color: #1ed41e;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links li:hover {
+    transform: scale(1.1);
+}
+
+.nav-links a {
+    color: #ffffff;
+    font-size: 17px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #1ed41e;
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.intro {
+    margin-bottom: 30px;
+    font-size: 17px;
+    color: #888;
+}
+
+.contact-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.item {
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 8px;
+    transition: 0.3s;
+    border: 1px solid #333;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    border-color: #1ed41e;
+}
+
+.item h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #1ed41e;
+}
+
+.value {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+footer {
+    background-color: #111;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 10px;
+}
+
+.footer-section {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-section h3 {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #111;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        transform: translateY(-300px);
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s ease;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
