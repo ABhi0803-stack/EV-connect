@@ -35,11 +35,10 @@ main{
     z-index: 1000;
 }
 
-.logo a {
+.logo {
     font-size: 26px;
     font-weight: 600;
     color: #1ed41e;
-    text-decoration: none;
 }
 
 .nav-links {
@@ -131,10 +130,6 @@ footer {
     .hamburger {
         display: block;
     }
-    .logo a{
-        font-size: 20px;
-        text-decoration: none;
-    }
 
     .nav-links {
         position: absolute;
@@ -164,9 +159,8 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .logo a{
+    .logo {
         font-size: 20px;
-        text-decoration: none;
     }
 
     .tablelist th,

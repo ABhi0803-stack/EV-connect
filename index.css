@@ -29,11 +29,10 @@ body {
     max-width: 100%;
 }
 
-.logo a {
+.logo {
     font-size: 26px;
     font-weight: 600;
     color: #1ed41e;
-    text-decoration: none;
 }
 
 .nav-links {
@@ -140,10 +139,6 @@ button:hover {
     .hamburger {
         display: block;
     }
-     .logo a{
-        font-size: 20px;
-        text-decoration: none;
-    }
     .nav-links {
         position: absolute;
         top: 70px;
@@ -184,9 +179,8 @@ button:hover {
 }
 
 @media (max-width: 480px) {
-    .logo a{
+    .logo {
         font-size: 20px;
-        text-decoration: none;
     }
     .about {
         max-width: 90%;
