@@ -180,8 +180,9 @@ button:hover {
 }
 
 @media (max-width: 480px) {
-    .logo {
+    .logo a {
         font-size: 20px;
+        text-decoration: none;
     }
     .about {
         max-width: 90%;
