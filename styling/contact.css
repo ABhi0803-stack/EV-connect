@@ -37,10 +37,11 @@ main {
     z-index: 1000;
 }
 
-.logo {
+.logo a {
     font-size: 26px;
     font-weight: 600;
     color: #1ed41e;
+    text-decoration: none;
 }
 
 .nav-links {

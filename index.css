@@ -29,10 +29,11 @@ body {
     max-width: 100%;
 }
 
-.logo {
+.logo a {
     font-size: 26px;
     font-weight: 600;
     color: #1ed41e;
+    text-decoration: none;
 }
 
 .nav-links {
